@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+body {
+	margin:0px;
+	object-fit:contain;
+	background-image:url('https://cdna.artstation.com/p/assets/images/images/002/940/212/large/marc-zieger-raumschiffhangar-a-0-0001.jpg?1467559553');
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#Page_Title {
+	text-align: center;
+	font-size: 50px;
+	color: #B8860B;
+	-webkit-text-stroke-width: 3px;
+   	-webkit-text-stroke-color: black;
+}
+
+#Direction_Choices {
+	text-align: center;
+}
+
+#SignupChoice {
+	position: relative;
+	left: 150px;
+	display:inline;
+}
+
+#ship1 {
+	height: 70%;
+	width: 70%;
+}
+
+#signup {
+	position:relative;
+	left: 50px;
+    background-color: #FF8C00;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 12px;
+    font-family: impact;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#LoginChoice {
+	position: relative;
+	left: 50px;
+	margin: 50px;
+	display:inline;
+}
+
+#ship2 {
+	height: 80%;
+	width: 80%;
+}
+
+#login {
+	background-color: #DC143C;
+	position:relative;
+	left: 100px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 12px;
+    font-family: impact;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#login:hover, #signup:hover, #stats:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#StatsChoice {
+	position: relative;
+	left: 50px;
+	margin: 30px;
+	display:inline;
+}
+
+#ship3 {
+	height: 85%;
+	width: 85%;
+}
+
+#stats {
+	background-color: #DAA520;
+	position:relative;
+	left: 50px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 12px;
+    font-family: impact;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.container {
+  width: calc(100% / 4);
+  height: 10%;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+
+
+
