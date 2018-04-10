@@ -52,7 +52,8 @@
 	
 		<div id="Main">
 			<div id="Page_Title">
-				<h1>LAUNCH</h1>
+				<h1>THE GREAT</h1>
+				<h1>SPACE RACE</h1>
 			</div>
 			
 				<div class="container" id="SignupChoice">
