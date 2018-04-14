@@ -7,6 +7,7 @@
 	<%@ page import ="java.util.List"%>
 	<%@ page import ="ProjectPackage.User" %>
 	<%@ page import ="ProjectPackage.Database" %>
+	<%@ page import ="ProjectPackage.GameSession" %>
 	<%@ page import ="com.google.gson.Gson"%>
 	<%@ page import ="com.google.gson.GsonBuilder"%>
 	<%@ page import ="java.io.BufferedReader"%>
@@ -25,7 +26,7 @@
 		
 		try {
 			gson = new GsonBuilder().setPrettyPrinting().create();
-			file = this.getServletContext().getRealPath("/Sample.json");
+			file = this.getServletContext().getRealPath("/test.json");
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			database = gson.fromJson(br, Database.class);
 			users = database.getDatabase();
@@ -40,7 +41,11 @@
 		mySession.setAttribute("database", database);
 		mySession.setAttribute("gson", gson);
 		mySession.setAttribute("loggedIn", false);
-		//System.out.println("Logging out of session: " + !(boolean)mySession.getAttribute("loggedIn"));
+		mySession.setAttribute("loggedInUser", null);
+		mySession.setAttribute("loggedInGame", null);
+		
+		List<GameSession> games = new ArrayList<GameSession>();
+		mySession.setAttribute("games", games);
 	%>
 	
 	<head>
@@ -52,8 +57,7 @@
 	
 		<div id="Main">
 			<div id="Page_Title">
-				<h1>THE GREAT</h1>
-				<h1>SPACE RACE</h1>
+				<h1>LAUNCH</h1>
 			</div>
 			
 				<div class="container" id="SignupChoice">
@@ -66,7 +70,7 @@
 				</div>
 				<div class="container" id="StatsChoice">
 					<img id="ship3" src="http://1.bp.blogspot.com/-ZRDN2sugdrg/UXa1qeFfjYI/AAAAAAAAVjo/1m10L-jCIgo/s1600/starcraft_2_render7E0.png">
-					<form method="POST" action="general_statistics.jsp"><button name="stats" id="stats">General Statistics</button></form>
+					<form method="POST" action="GeneralStatistics_Validate"><button name="stats" id="stats">General Statistics</button></form>
 				</div>
 			
 		</div>

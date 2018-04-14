@@ -1,10 +1,23 @@
 package ProjectPackage;
 
-public class Statistics {
+import java.io.Serializable;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class Statistics implements Serializable {
 	
+	@SerializedName("games played")
+	@Expose
 	int gamesPlayed;
+	@SerializedName("games won")
+	@Expose
 	int gamesWon;
+	@SerializedName("total points")
+	@Expose
 	int pointsAccumulated;
+	
+	private final static long serialVersionUID = -5659000743766857262L;
 	
 	public Statistics(int gamesPlayed, int gamesWon, int pointsAccumulated) {
 		

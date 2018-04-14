@@ -1,19 +1,27 @@
 package ProjectPackage;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class User {
+public class User implements Serializable {
 	@SerializedName("username")
 	@Expose
 	String username;
 	@SerializedName("password")
 	@Expose
 	String password;
+	@SerializedName("stats")
+	@Expose
+	Statistics stats;
 	
-	public User(String username, String password) {
+	private final static long serialVersionUID = -5659000743766857262L;
+	
+	public User(String username, String password, Statistics stats) {
 		this.username = username;
 		this.password = password;
+		this.stats = stats;
 	}
 	
 	public void setUsername(String newUsername) {
@@ -30,6 +38,14 @@ public class User {
 	
 	public String getPassword() {
 		return password;
+	}
+	
+	public void setStats(Statistics stats) {
+		this.stats = stats;
+	}
+	
+	public Statistics getStats() {
+		return stats;
 	}
 	
 }

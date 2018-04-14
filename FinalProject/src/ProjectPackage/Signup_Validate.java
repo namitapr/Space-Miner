@@ -31,7 +31,7 @@ public class Signup_Validate extends HttpServlet {
 		
 		boolean errorPresent = false;
 		
-		String pageToForward = "/resultspage.jsp";
+		String pageToForward = "/ChoicePage.jsp";
 		
 		HttpSession session = request.getSession(false);
 		
@@ -67,7 +67,7 @@ public class Signup_Validate extends HttpServlet {
 		
 		if (!errorPresent) {
 			// Add new user to JSON file
-			User newUser = new User(username, password);
+			User newUser = new User(username, password, new Statistics(0, 0, 0));
 			users.add(newUser);
 			database.setUsers(users);
 			
@@ -76,7 +76,7 @@ public class Signup_Validate extends HttpServlet {
 			try {
 				fw = new FileWriter(file);
 				fw.write(jsonString);
-				System.out.println(jsonString);
+				//System.out.println(jsonString);
 				fw.flush();
 				fw.close();	
 			} catch (IOException e) {
@@ -86,6 +86,10 @@ public class Signup_Validate extends HttpServlet {
 			// MAYBE FIX THIS
 			request.setAttribute("users", users);
 			request.setAttribute("file", file);
+			
+			session.setAttribute("loggedIn", true);
+			session.setAttribute("indexOfUser", database.indexOfUser(username));
+			session.setAttribute("loggedInUser", users.get(database.indexOfUser(username)));
 		}
 		
 		RequestDispatcher dispatch = getServletContext().getRequestDispatcher(pageToForward);

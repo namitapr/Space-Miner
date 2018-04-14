@@ -27,7 +27,7 @@ public class Login_Validate extends HttpServlet {
 		String matchingPassword = "";
 		boolean passwordCorrect = false;
 
-		String pageToForward = "/resultspage.jsp";
+		String pageToForward = "/ChoicePage.jsp";
 
 		HttpSession session = request.getSession(false);
 
@@ -74,7 +74,7 @@ public class Login_Validate extends HttpServlet {
 
 		if (!errorPresent && usernameCorrect && passwordCorrect) {
 			session.setAttribute("loggedIn", true);
-			System.out.println("Login Successful: " + session.getAttribute("loggedIn"));
+			//System.out.println("Login Successful: " + session.getAttribute("loggedIn"));
 			session.setAttribute("indexOfUser", database.indexOfUser(username));
 			session.setAttribute("loggedInUser", users.get(database.indexOfUser(username)));
 		}
