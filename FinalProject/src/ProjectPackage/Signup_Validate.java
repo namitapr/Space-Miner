@@ -2,6 +2,7 @@ package ProjectPackage;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -13,9 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.google.gson.Gson;
-
-import ProjectPackage.Database;
-import ProjectPackage.User;
 
 /**
  * Servlet implementation class Signup_Validate
@@ -67,7 +65,7 @@ public class Signup_Validate extends HttpServlet {
 		
 		if (!errorPresent) {
 			// Add new user to JSON file
-			User newUser = new User(username, password, new Statistics(0, 0, 0));
+			User newUser = new User(username, password, new Statistics(0, 0, 0), new ArrayList<String>(), "");
 			users.add(newUser);
 			database.setUsers(users);
 			
