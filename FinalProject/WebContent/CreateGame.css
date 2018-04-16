@@ -8,7 +8,7 @@ body {
 	background-size: cover;
 }
 
-#GoHome {
+#GotoChoices {
 	background-color: #DC143C;
 	border: none;
 	color: white;
@@ -26,10 +26,11 @@ body {
 
 #pageTitle {
 	text-align: center;
-	font-size: 50px;
+	font-size: 45px;
 	color: #B8860B;
 	-webkit-text-stroke-width: 3px;
    	-webkit-text-stroke-color: black;
+   	margin-bottom: -0.5em;
 }
 
 #userInputSection {
@@ -37,31 +38,51 @@ body {
 	align-self: center;
 	color: white;
 	text-align: center;
-	font-size: 35px;
+	font-size: 25px;
+	margin-top: -2em;
+}
+
+h5 {
+	margin: 15px;
+	font-size: 45px;
+	margin-top: 50px;
+	color: white;
+	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: black;
 }
 
 input[type="text"] {
-	width: 250px;
+	font-size: 20px;
+	padding: 5px;
+	width: 350px;
 	height: 25px;
-	margin-top: -2em;
-	background-color: gray;
+	margin-top: 0px;
 	color: white;	
 }
 
-#signupButton {
-	background-color: #DC143C;
-border: none;
-color: white;
-text-align: center;
-text-decoration: none;
-font-size: 26px;
-border-radius: 12px;
-font-family: impact;
-padding: 20px;
-width: 150px;
+#radioButtons {
+	margin-left: 37%;
+}
 
-margin-top: 50px;
--webkit-transition-duration: 0.4s;
-Safari
-transition-duration: 0.4s;
+label {
+	font-size: 35px;	
+	-webkit-text-stroke-width: 0.1px;
+   	-webkit-text-stroke-color: black;
+}
+
+#ContinueButton {
+	background-color: #DC143C;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	border-radius: 12px;
+	font-family: impact;
+	padding: 20px;
+	width: 150px;
+	margin-top: 15px;
+	-webkit-transition-duration: 0.4s;
+	Safari
+	transition-duration: 0.4s;
 }
