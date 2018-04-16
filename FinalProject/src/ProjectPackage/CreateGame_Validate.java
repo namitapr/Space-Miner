@@ -72,6 +72,7 @@ public class CreateGame_Validate extends HttpServlet {
 			
 			GameSession newGame = new GameSession(gamename, numNumPlayers, code);
 			newGame.addPlayer((User)request.getAttribute("loggedInUser"));
+			((User)request.getAttribute("loggedInUser")).setCurrGame(gamename);
 			games.add(newGame);
 			request.setAttribute("loggedInGame", newGame);
 			mySession.setAttribute("games", games);

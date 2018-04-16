@@ -29,6 +29,11 @@
 				
 					<font size="3" color="black">@<%= responseResults.get(i).getUsername() %></font>
 					
+					<form id="SendInvite" action="SendInvite">
+						<input type="text" name="currUser" style="display:none;" value="<%= responseResults.get(i).getUsername() %>" />
+						<button name="submit">Invite</button>
+					</form>
+					
 				</td>
 			<% if ((i == 6) || (i == 13) || (i == 20) || (i == 27)) { %>
 				</tr>
