@@ -14,6 +14,9 @@
 		<link rel="stylesheet" type="text/css" href="UserResultsPage.css"/>
 	</head>
 	<body>
+		<div id="Page_Title">
+			<h1>Users:</h1>
+		</div>
 		<div id="userInfoSection">
 			<% List<User> responseResults = (List<User>)request.getAttribute("resultsList"); %>
 			<% if (responseResults.size() == 0) { %>
@@ -28,7 +31,7 @@
 				<% } %>
 					<td>				<% // MAKE SURE TO ADD IN THAT YOU CANNOT INVITE YOURSELF %>
 					
-						<font size="3" color="black">@<%= responseResults.get(i).getUsername() %></font>
+						<p id="username">@<%= responseResults.get(i).getUsername() %></p>
 						
 						<form id="SendInvite" action="SendInvite">
 							<input type="text" name="currUser" style="display:none;" value="<%= responseResults.get(i).getUsername() %>" />

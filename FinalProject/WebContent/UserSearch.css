@@ -25,7 +25,7 @@ body {
 }
 
 input[type="text"] {
-	width: 250px;
+	width: 350px;
 	height: 25px;
 	margin-top: -2em;
 	background-color: gray;
@@ -33,7 +33,7 @@ input[type="text"] {
 }
 
 #searchButton {
-	background-color: #DC143C;
+	background-color: #B8860B;
 	border: none;
 	color: white;
 	text-align: center;
@@ -41,7 +41,7 @@ input[type="text"] {
 	font-size: 26px;
 	border-radius: 12px;
 	font-family: impact;
-	padding: 20px;
+	padding: 10px;
 	width: 150px;
 	margin-top: 50px;
 	-webkit-transition-duration: 0.4s;

@@ -19,6 +19,7 @@
 				
 				<div id="SearchbarArea">
 					<input type="text" name="searchbar" id="searchbar" placeholder="Search for Users..." size="20">
+					<br />
 					<button name="submit" id="searchButton">Search</button>
 				</div>
 				
