@@ -17,6 +17,9 @@ public class CreateGame_Validate extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		// TO DELETE
+		System.out.println("CreateGame Validate called");
+		
 		HttpSession mySession = request.getSession(false);
 		
 		boolean errorPresent = false;
@@ -25,6 +28,9 @@ public class CreateGame_Validate extends HttpServlet {
 		int numNumPlayers = 0;
 		
 		List<GameSession> games = (List<GameSession>)mySession.getAttribute("games");
+		
+		// TO DELETE
+		System.out.println("games size: " + games.size());
 		
 		String pageToForward = "/UserSearch.jsp";
 		
@@ -71,9 +77,12 @@ public class CreateGame_Validate extends HttpServlet {
 			}
 			
 			GameSession newGame = new GameSession(gamename, numNumPlayers, code);
-			newGame.addPlayer((User)request.getAttribute("loggedInUser"));
-			((User)request.getAttribute("loggedInUser")).setCurrGame(code);
+			User u = (User)request.getAttribute("loggedInUser");
+			
+			newGame.addPlayer(u);
+			u.setCurrGame(code);
 			games.add(newGame);
+			
 			request.setAttribute("loggedInGame", newGame);
 			mySession.setAttribute("games", games);
 			

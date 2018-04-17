@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+body {
+	margin:0px;
+	object-fit:contain;
+	background-image:url('https://cdna.artstation.com/p/assets/images/images/002/940/212/large/marc-zieger-raumschiffhangar-a-0-0001.jpg?1467559553');
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#Page_Title {
+	text-align: center;
+	font-size: 50px;
+	color: #B8860B;
+	-webkit-text-stroke-width: 3px;
+   	-webkit-text-stroke-color: black;
+}
+
+#userInfoSection {
+	margin: 0 auto;
+	align-self: center;
+	color: white;
+	-webkit-text-stroke-width: 3px;
+   	-webkit-text-stroke-color: black;
+	text-align: center;
+	font-size: 25px;
+	margin-top: -2em;
+}
+
+#inviteButton {
+	background-color: #B8860B;
+	color: #B8860B;
+	-webkit-text-stroke-width: 0.1px;
+   	-webkit-text-stroke-color: black;
+}

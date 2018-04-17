@@ -11,36 +11,37 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>UserResultsPage</title>
+		<link rel="stylesheet" type="text/css" href="UserResultsPage.css"/>
 	</head>
 	<body>
-		
-		<% List<User> responseResults = (List<User>)request.getAttribute("resultsList"); %>
-		<% if (responseResults.size() == 0) { %>
-			<font size="25" color="white">No User Found!</font>
-		<%	} else { %>
-			<table>
-			<%
-			for (int i = 0; i < responseResults.size(); i++) { %>
-			
-			<% if ((i == 0) || (i == 7) || (i == 14) || (i == 21)) { %>
-				<tr>
-			<% } %>
-				<td>				<% // MAKE SURE TO ADD IN THAT YOU CANNOT INVITE YOURSELF %>
+		<div id="userInfoSection">
+			<% List<User> responseResults = (List<User>)request.getAttribute("resultsList"); %>
+			<% if (responseResults.size() == 0) { %>
+				<font size="25" color="white">No User Found!</font>
+			<%	} else { %>
+				<table>
+				<%
+				for (int i = 0; i < responseResults.size(); i++) { %>
 				
-					<font size="3" color="black">@<%= responseResults.get(i).getUsername() %></font>
+				<% if ((i == 0) || (i == 7) || (i == 14) || (i == 21)) { %>
+					<tr>
+				<% } %>
+					<td>				<% // MAKE SURE TO ADD IN THAT YOU CANNOT INVITE YOURSELF %>
 					
-					<form id="SendInvite" action="SendInvite">
-						<input type="text" name="currUser" style="display:none;" value="<%= responseResults.get(i).getUsername() %>" />
-						<button name="submit">Invite</button>
-					</form>
-					
-				</td>
-			<% if ((i == 6) || (i == 13) || (i == 20) || (i == 27)) { %>
-				</tr>
-			<% } %>
-		
-		<% }} %>
-		</table>
-		
+						<font size="3" color="black">@<%= responseResults.get(i).getUsername() %></font>
+						
+						<form id="SendInvite" action="SendInvite">
+							<input type="text" name="currUser" style="display:none;" value="<%= responseResults.get(i).getUsername() %>" />
+							<button name="submit" id="inviteButton">Invite</button>
+						</form>
+						
+					</td>
+				<% if ((i == 6) || (i == 13) || (i == 20) || (i == 27)) { %>
+					</tr>
+				<% } %>
+			
+			<% }} %>
+			</table>
+		</div>
 	</body>
 </html>

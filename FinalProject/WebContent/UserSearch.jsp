@@ -6,19 +6,24 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>UserSearch</title>
+		<link rel="stylesheet" type="text/css" href="UserSearch.css"/>
 	</head>
 	<body>
 		
-		<h3>Search for Users to Invite:</h3>
+		<div id="pageTitle">
+			<h3>Search for Users to Invite:</h3>
+		</div>
 		
-		<form id="UserSearch" action="UserSearch_Validate">
-			
-			<div id="SearchbarArea">
-				<input type="text" name="searchbar" id="searchbar" placeholder="Search for Users..." size="20">
-				<button name="submit">Search</button>
-			</div>
-			
-		</form>
+		<div id="userInputSection">
+			<form id="UserSearch" action="UserSearch_Validate">
+				
+				<div id="SearchbarArea">
+					<input type="text" name="searchbar" id="searchbar" placeholder="Search for Users..." size="20">
+					<button name="submit" id="searchButton">Search</button>
+				</div>
+				
+			</form>
+		</div>
 		
 	</body>
 </html>

@@ -74,9 +74,15 @@ public class Login_Validate extends HttpServlet {
 
 		if (!errorPresent && usernameCorrect && passwordCorrect) {
 			session.setAttribute("loggedIn", true);
-			//System.out.println("Login Successful: " + session.getAttribute("loggedIn"));
+			
+			// TO DELETE
+			// System.out.println("Login Successful: " + session.getAttribute("loggedIn"));
+			
 			session.setAttribute("indexOfUser", database.indexOfUser(username));
 			session.setAttribute("loggedInUser", users.get(database.indexOfUser(username)));
+			
+			// TO DELETE
+			// System.out.println("This is the currently logged in user: " + ((User)session.getAttribute("loggedInUser")).getUsername());
 		}
 
 		RequestDispatcher dispatch = getServletContext().getRequestDispatcher(pageToForward);

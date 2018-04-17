@@ -11,22 +11,27 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>JoinGamePage</title>
+		<link rel="stylesheet" type="text/css" href="JoinGame.css"/>
 	</head>
 	<body>
 		<div id="GotoChoices">
 			<form method="POST" action="ChoicePage.jsp"><button name="GotoChoices" id="GotoChoices">Return to Choices</button></form>
 		</div>
 		
-		<h3>Enter Game ID to Join:</h3>
+		<div id ="pageTitle">
+			<h1>Enter Game ID to Join:</h1>
+		</div>
 		
-		<form id="GameSearch" action="GameJoin_Validate">
-			<h3>${errorMessageJoin}</h3>
-			<div id="SearchbarArea">
-				<input type="text" name="searchbar" id="searchbar" placeholder="Join Game..." size="20">
-				<button name="submit">Join</button>
-			</div>
-			
-		</form>
+		<div id="userInputSection">
+			<form id="GameSearch" action="GameJoin_Validate">
+				<h3>${errorMessageJoin}</h3>
+				<div id="SearchbarArea">
+					<input type="text" name="searchbar" id="searchbar" placeholder="Join Game..." size="20">
+					<button name="submit" id="joinButton">Join</button>
+				</div>
+				
+			</form>
+		
 				
 		<% List<User> responseResults = (List<User>)request.getAttribute("resultsList"); %>
 		<% if (responseResults.size() == 0) { %>
@@ -50,6 +55,6 @@
 		
 		<% }} %>
 		</table>
-
+	</div>
 	</body>
 </html>

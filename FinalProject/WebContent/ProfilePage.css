@@ -9,7 +9,7 @@ body {
 }
 
 #GotoChoices {
-	background-color: #DC143C;
+	background-color: #DAA520;
 	border: none;
 	color: white;
 	text-align: center;
@@ -31,6 +31,7 @@ body {
 	-webkit-text-stroke-width: 3px;
    	-webkit-text-stroke-color: black;
    	margin-bottom: -0.5em;
+   	margin-top: -2em;
 }
 
 #userInputSection {
@@ -42,9 +43,43 @@ body {
 	margin-top: -2em;
 }
 
-h5 {
+#userInfoSection {
+	margin: 0 auto;
+	align-self: center;
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	margin-top: -2em;
+}
+
+h3 {
 	margin: 15px;
 	font-size: 45px;
+	margin-top: 50px;
+	color: #B8860B;
+	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: black;
+}
+
+h4 {
+	margin: 15px;
+	font-size: 35px;
+	color: white;
+	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: black;
+}
+
+h5 {
+	margin: 15px;
+	font-size: 35px;
+	color: white;
+	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: black;
+}
+
+#usernameSection, #passwordSection, #radioButtons {
+	margin: 15px;
+	font-size: 35px;
 	margin-top: 50px;
 	color: white;
 	-webkit-text-stroke-width: 1px;
@@ -64,13 +99,8 @@ input[type="text"] {
 	margin-left: 37%;
 }
 
-label {
-	font-size: 35px;	
-	-webkit-text-stroke-width: 0.1px;
-   	-webkit-text-stroke-color: black;
-}
 
-#ContinueButton {
+#ChangeInfoButton {
 	background-color: #DC143C;
 	border: none;
 	color: white;
@@ -80,7 +110,7 @@ label {
 	border-radius: 12px;
 	font-family: impact;
 	padding: 20px;
-	width: 150px;
+	width: 250px;
 	margin-top: 15px;
 	-webkit-transition-duration: 0.4s;
 	Safari
