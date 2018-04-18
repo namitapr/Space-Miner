@@ -22,6 +22,10 @@ public class CreateGame_Validate extends HttpServlet {
 		
 		HttpSession mySession = request.getSession(false);
 		
+		if(mySession == null) {
+			System.out.print("SESSION DOESNT EXIST AHHHHHH \n\n\n\n\n\n\n\n");
+		}
+		
 		boolean errorPresent = false;
 		String gamename = request.getParameter("namebar");
 		String numPlayers = request.getParameter("numplayers");
