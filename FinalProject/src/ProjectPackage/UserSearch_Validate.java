@@ -22,20 +22,19 @@ public class UserSearch_Validate extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String searchUser = request.getParameter("searchbar");
-
 		String pageToForward = "/UserResultsPage.jsp";
-
+		
+		HttpSession userSearchSession = request.getSession(false);
+		List<User> users = (List<User>)userSearchSession.getAttribute("users");
+		Database database = (Database)userSearchSession.getAttribute("database");
+		List<User> userResults = new ArrayList<User>();
+		
 		if (searchUser.trim().equals("")) {
-			pageToForward = "/UserSearch.jsp";
+			for (int i = 0; i < users.size(); i++) {
+				userResults.add(users.get(i));
+			}
 		}
 		else {
-			HttpSession userSearchSession = request.getSession(false);
-
-			List<User> users = (List<User>)userSearchSession.getAttribute("users");
-			Database database = (Database)userSearchSession.getAttribute("database");
-
-			List<User> userResults = new ArrayList<User>();
-
 			for (int i = 0; i < users.size(); i++) {
 
 				String username = users.get(i).getUsername();
@@ -46,12 +45,12 @@ public class UserSearch_Validate extends HttpServlet {
 					}
 				}
 			}
-
-			request.setAttribute("resultsList", userResults);
-
-			RequestDispatcher dispatch = getServletContext().getRequestDispatcher(pageToForward);
-			dispatch.forward(request, response);
 		}
+		
+		request.setAttribute("resultsList", userResults);
+
+		RequestDispatcher dispatch = getServletContext().getRequestDispatcher(pageToForward);
+		dispatch.forward(request, response);
 	}
 
 }
