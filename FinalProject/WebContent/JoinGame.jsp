@@ -40,19 +40,11 @@
 			<table>
 			<%
 			for (int i = 0; i < responseResults.size(); i++) { %>
-			
-			<% if ((i == 0) || (i == 7) || (i == 14) || (i == 21)) { %>
 				<tr>
-			<% } %>
 				<td>	
-				
-					<font size="3" color="black">@<%= responseResults.get(i) %></font>
-					
+					@<%= responseResults.get(i) %>
 				</td>
-			<% if ((i == 6) || (i == 13) || (i == 20) || (i == 27)) { %>
 				</tr>
-			<% } %>
-		
 		<% }} %>
 		</table>
 	</div>
