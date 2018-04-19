@@ -415,5 +415,8 @@ game.world.removeAll();
 
 // ADD IN: redirecting
 
+window.location.href = 'EndGame?score=' + score;
+
+
 
 }

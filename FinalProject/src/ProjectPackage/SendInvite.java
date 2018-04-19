@@ -34,7 +34,9 @@ public class SendInvite extends HttpServlet {
 			Database database = (Database)session.getAttribute("database");
 			User u = users.get(database.indexOfUser(loggedInUser));
 			
-			String pageToForward = "/PhaserGame/index.html";
+			//String pageToForward = "/../../../WebContent/PhaserGame/index.html";
+			String pageToForward = "/index.html";
+			//String pageToForward = this.getServletContext().getRealPath("/index.html");
 			String gameID = u.getCurrGame();
 			
 			for(int i=0; i<users.size(); i++) {

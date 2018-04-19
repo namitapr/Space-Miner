@@ -9,6 +9,7 @@ public class GameSession {
 	private int numPlayers = 0;
 	private List<User> players = null;
 	private String id = "";
+	private int playersFinished = 0;
 	
 	public GameSession(String name, int numPlayers, String id) {
 		this.setName(name);
@@ -55,6 +56,17 @@ public class GameSession {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+	
+	public void playerFinished() {
+		playersFinished++;
+	}
+	
+	public boolean gameFinished() {
+		if(playersFinished == numPlayers) {
+			return true;
+		}
+		return false;
 	}
 	
 }

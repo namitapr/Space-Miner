@@ -22,15 +22,19 @@ public class User implements Serializable {
 	@SerializedName("currGame")
 	@Expose
 	String currGame;
+	@SerializedName("currScore")
+	@Expose
+	String currScore;
 	
 	private final static long serialVersionUID = -5659000743766857262L;
 	
-	public User(String username, String password, Statistics stats, ArrayList<String> invites, String currGame) {
+	public User(String username, String password, Statistics stats, ArrayList<String> invites, String currGame, String currScore) {
 		this.username = username;
 		this.password = password;
 		this.stats = stats;
 		this.invites = invites;
 		this.currGame = currGame;
+		this.currScore = currScore;
 	}
 	
 	public void setUsername(String newUsername) {
@@ -77,6 +81,13 @@ public class User implements Serializable {
 		invites.add(gameID);
 	}
 	
+	public void setCurrScore(String currScore) {
+		this.currScore = currScore;
+	}
+	
+	public String getCurrScore() {
+		return this.currScore;
+	}
 }
 
 

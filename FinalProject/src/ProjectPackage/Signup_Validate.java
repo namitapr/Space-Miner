@@ -65,7 +65,7 @@ public class Signup_Validate extends HttpServlet {
 		
 		if (!errorPresent) {
 			// Add new user to JSON file
-			User newUser = new User(username, password, new Statistics(0, 0, 0), new ArrayList<String>(), "");
+			User newUser = new User(username, password, new Statistics(0, 0, 0), new ArrayList<String>(), "", "0");
 			users.add(newUser);
 			database.setUsers(users);
 			

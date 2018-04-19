@@ -1,9 +1,9 @@
 {
 	"users": [
-		{"username":"jeffreym","password":"cs201","stats":{"games won":"15", "games played":"36", "total points":"11287"}, "invites":["game1", "game2"], "currGame":""},
-		{"username":"aaronc","password":"cs270","stats":{"games won":"11", "games played":"20", "total points":"5734"}, "invites":["game1", "game2"], "currGame":""},
-		{"username":"michaels","password":"cs170","stats":{"games won":"3", "games played":"3", "total points":"1234"}, "invites":["game1", "game2"], "currGame":""},
-		{"username":"markr","password":"ee209","stats":{"games won":"42", "games played":"48", "total points":"17546"}, "invites":["game1", "game2"], "currGame":""},
-		{"username":"goodney","password":"cs103","stats":{"games won":"10", "games played":"17", "total points":"6789"}, "invites":["game1", "game2"], "currGame":""}
+		{"username":"jeffreym","password":"cs201","stats":{"games won":"15", "games played":"36", "total points":"11287"}, "invites":["game1", "game2"], "currGame":"", "currScore":""},
+		{"username":"aaronc","password":"cs270","stats":{"games won":"11", "games played":"20", "total points":"5734"}, "invites":["game1", "game2"], "currGame":"", "currScore":""},
+		{"username":"michaels","password":"cs170","stats":{"games won":"3", "games played":"3", "total points":"1234"}, "invites":["game1", "game2"], "currGame":"", "currScore":""},
+		{"username":"markr","password":"ee209","stats":{"games won":"42", "games played":"48", "total points":"17546"}, "invites":["game1", "game2"], "currGame":"", "currScore":""},
+		{"username":"goodney","password":"cs103","stats":{"games won":"10", "games played":"17", "total points":"6789"}, "invites":["game1", "game2"], "currGame":"", "currScore":""}
 	]
 }
