@@ -99,3 +99,21 @@ input[type="text"] {
 	Safari
 	transition-duration: 0.4s;
 }
+
+td {
+	align-self: center;
+	text-align: center;
+	padding-left: 650px;
+	padding-top: 50px;
+	color: white;
+	font-size: 25px;
+}
+
+tr {
+	padding: 25px;
+}
+
+table {
+	margin-left: 40%;
+	margin-top: 50px;
+}

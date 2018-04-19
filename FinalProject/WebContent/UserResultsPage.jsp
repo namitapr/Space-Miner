@@ -14,6 +14,12 @@
 		<link rel="stylesheet" type="text/css" href="UserResultsPage.css"/>
 	</head>
 	<body>
+	
+	<% 
+		HttpSession profileSession = request.getSession(false);
+		User user = (User)session.getAttribute("loggedInUser");
+		%>
+		
 		<div id="Page_Title">
 			<h1>Users:</h1>
 		</div>
@@ -34,7 +40,8 @@
 						<p id="username">@<%= responseResults.get(i).getUsername() %></p>
 						
 						<form id="SendInvite" action="SendInvite">
-							<input type="text" name="currUser" style="display:none;" value="<%= responseResults.get(i).getUsername() %>" />
+							<input type="text" name="currUser" id="currUser" style="display:none;" value="<%= responseResults.get(i).getUsername() %>" />
+							<input type="text" name="loggedInUser" id="loggedInUser" style="display:none;" value="<%= user.getUsername() %>" />
 							<button name="submit" id="inviteButton">Invite</button>
 						</form>
 						

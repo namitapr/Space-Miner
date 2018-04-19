@@ -6,6 +6,7 @@ import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,20 +18,30 @@ public class CreateGame_Validate extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		// TO DELETE
-		System.out.println("CreateGame Validate called");
-		
 		HttpSession mySession = request.getSession(false);
+		
+		// TO DELETE IF NOT WORKING
+		if (request.getParameter("JSESSIONID") != null) {
+		    Cookie userCookie = new Cookie("JSESSIONID", request.getParameter("JSESSIONID"));
+		    response.addCookie(userCookie);
+		} else {
+		    String sessionId = mySession.getId();
+		    Cookie userCookie = new Cookie("JSESSIONID", sessionId);
+		    response.addCookie(userCookie);
+		}
 		
 		boolean errorPresent = false;
 		String gamename = request.getParameter("namebar");
 		String numPlayers = request.getParameter("numplayers");
 		int numNumPlayers = 0;
 		
-		List<GameSession> games = (List<GameSession>)mySession.getAttribute("games");
+		String username = request.getParameter("currUser");
 		
-		// TO DELETE
-		System.out.println("games size: " + games.size());
+		List<User> users = (List<User>)mySession.getAttribute("users");
+		Database database = (Database)mySession.getAttribute("database");
+		User u = users.get(database.indexOfUser(username));
+		
+		List<GameSession> games = (List<GameSession>)mySession.getAttribute("games");
 		
 		String pageToForward = "/UserSearch.jsp";
 		
@@ -77,7 +88,6 @@ public class CreateGame_Validate extends HttpServlet {
 			}
 			
 			GameSession newGame = new GameSession(gamename, numNumPlayers, code);
-			User u = (User)request.getAttribute("loggedInUser");
 			
 			newGame.addPlayer(u);
 			u.setCurrGame(code);

@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+	<%@ page import ="ProjectPackage.User" %>
+	
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>CreateGame</title>
@@ -13,8 +15,15 @@
 			<form method="POST" action="ChoicePage.jsp"><button name="GotoChoices" id="GotoChoices">Return to Choices</button></form>
 		</div>
 		
+		<% 
+		HttpSession profileSession = request.getSession(false);
+		User user = (User)session.getAttribute("loggedInUser");
+		%>
+		
 		<div id="userInputSection">
 			<form class="setupform" name="setupform" action="CreateGame_Validate">
+			<input type="text" name="currUser" id="currUser" style="display:none;" value="<%= user.getUsername() %>" />
+			
 			<div id="pageTitle">
 				<h1>Set Up Your Game</h1>
 			</div>
@@ -43,6 +52,7 @@
 				</tr>
 				</table>
 			</div>
+				
 				
 			<br /><button name="submit" id="ContinueButton">Continue...</button>
 				
