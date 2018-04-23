@@ -1,3 +1,5 @@
+package ProjectPackage;
+
 import java.applet.Applet;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;

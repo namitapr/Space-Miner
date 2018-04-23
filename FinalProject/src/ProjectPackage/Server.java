@@ -1,8 +1,14 @@
+package ProjectPackage;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Server {
 	private static ServerSocket serverSocket;
@@ -31,6 +37,32 @@ public class Server {
 			}
 
 		}
+	}
+}
+
+/*A class that holds a map of the string game code and an object containing all data about the game 
+ * */
+//Holds games! This is the main container 
+public class Games {
+	private static Map<String, Game> games = new HashMap<String, Game>();
+	
+	public Game getGame(String gameCode) {
+		return games.get(gameCode);
+	}
+	public void broadcastMessage(String gameCode, String message) {
+		// TODO 
+	}
+}
+//Holds all the data about a game
+class Game {
+	//List of Clients associated with this game
+	private List<Client> players = new ArrayList<Client>();
+	
+	public List<Client> getPlayers(){
+		return this.players;
+	}
+	public void broadcastMessage(String message) {
+		// TODO
 	}
 }
 
