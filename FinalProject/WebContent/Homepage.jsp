@@ -72,6 +72,9 @@
 					<img id="ship3" src="http://1.bp.blogspot.com/-ZRDN2sugdrg/UXa1qeFfjYI/AAAAAAAAVjo/1m10L-jCIgo/s1600/starcraft_2_render7E0.png">
 					<form method="POST" action="GeneralStatistics_Validate"><button name="stats" id="stats">General Statistics</button></form>
 				</div>
+				<div class="container" id="GuestChoice">
+					<form method="POST" action="ContinueAsGuest_Validate"><button name="guest" id="guest">Continue As Guest</button></form>
+				</div>
 			
 		</div>
 		

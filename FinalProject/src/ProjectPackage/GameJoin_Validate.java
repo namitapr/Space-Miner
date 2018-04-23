@@ -20,7 +20,7 @@ public class GameJoin_Validate extends HttpServlet {
 		String gameID = request.getParameter("searchbar");
 		boolean errorPresent = false;
 		boolean gameFound = false;
-		String pageToForward = ""; // NEED TO CHANGE THIS LATER
+		String pageToForward = "/index.html";
 		HttpSession mySession = request.getSession(false);
 		
 		if (gameID == null || gameID.trim().length() == 0) {

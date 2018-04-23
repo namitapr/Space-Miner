@@ -87,6 +87,8 @@ public class CreateGame_Validate extends HttpServlet {
 				code += (ALPHA_NUMERIC_STRING.charAt(character));
 			}
 			
+			System.out.println(code);
+			
 			GameSession newGame = new GameSession(gamename, numNumPlayers, code);
 			
 			newGame.addPlayer(u);

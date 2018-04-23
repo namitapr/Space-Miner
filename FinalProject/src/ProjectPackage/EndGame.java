@@ -1,5 +1,6 @@
 package ProjectPackage;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import com.google.gson.Gson;
 
 /**
  * Servlet implementation class EndGame
@@ -41,6 +44,25 @@ public class EndGame extends HttpServlet {
 		if(currGame.gameFinished()) {
 			pageToForward = "/FinalScores.jsp";
 		}
+		
+		Gson gson = (Gson)mySession.getAttribute("gson");
+		String file = (String)mySession.getAttribute("file");
+		database.setUsers(users);
+		
+		FileWriter fw;
+		String jsonString = gson.toJson(database);
+		try {
+			fw = new FileWriter(file);
+			fw.write(jsonString);
+			//System.out.println(jsonString);
+			fw.flush();
+			fw.close();	
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		// MAYBE FIX THIS
+		mySession.setAttribute("users", users);
 		
 		RequestDispatcher dispatch = getServletContext().getRequestDispatcher(pageToForward);
 		dispatch.forward(request, response);
