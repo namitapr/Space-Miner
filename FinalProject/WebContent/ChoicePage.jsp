@@ -16,6 +16,7 @@
 		
 		<% 
 		HttpSession profileSession = request.getSession(false);
+		profileSession.setAttribute("loggedInGame", null);
 		User user = (User)session.getAttribute("loggedInUser");
 		%>
 		

@@ -21,14 +21,14 @@ public class CreateGame_Validate extends HttpServlet {
 		HttpSession mySession = request.getSession(false);
 		
 		// TO DELETE IF NOT WORKING
-		if (request.getParameter("JSESSIONID") != null) {
-		    Cookie userCookie = new Cookie("JSESSIONID", request.getParameter("JSESSIONID"));
-		    response.addCookie(userCookie);
-		} else {
-		    String sessionId = mySession.getId();
-		    Cookie userCookie = new Cookie("JSESSIONID", sessionId);
-		    response.addCookie(userCookie);
-		}
+//		if (request.getParameter("JSESSIONID") != null) {
+//		    Cookie userCookie = new Cookie("JSESSIONID", request.getParameter("JSESSIONID"));
+//		    response.addCookie(userCookie);
+//		} else {
+//		    String sessionId = mySession.getId();
+//		    Cookie userCookie = new Cookie("JSESSIONID", sessionId);
+//		    response.addCookie(userCookie);
+//		}
 		
 		boolean errorPresent = false;
 		String gamename = request.getParameter("namebar");
@@ -93,7 +93,7 @@ public class CreateGame_Validate extends HttpServlet {
 			u.setCurrGame(code);
 			games.add(newGame);
 			
-			request.setAttribute("loggedInGame", newGame);
+			mySession.setAttribute("loggedInGame", newGame);
 			mySession.setAttribute("games", games);
 			
 		}

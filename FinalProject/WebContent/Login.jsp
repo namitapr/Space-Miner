@@ -23,7 +23,7 @@
 				</div>
 				<div id="passwordSection">
 					<h3>Password</h3>
-					<div style="color: #FF0000;"><input name="inputPassword" id="inputPassword" type="text"></div>
+					<div style="color: #FF0000;"><input name="inputPassword" id="inputPassword" type="password" autocomplete="off"></div>
 				</div>
 				
 				<div id="submitButtonSection">

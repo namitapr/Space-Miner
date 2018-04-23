@@ -31,9 +31,13 @@
 				</div>
 				
 			</form>
-		
 				
-		<% List<User> responseResults = (List<User>)request.getAttribute("resultsList"); %>
+		<% 
+		
+			HttpSession mySession = request.getSession(false);
+			
+			List<User> responseResults = (List<User>)mySession.getAttribute("userInvites"); 
+		%>
 		<% if (responseResults.size() == 0) { %>
 			<font size="25" color="white">No Invites Found!</font>
 		<%	} else { %>
@@ -42,7 +46,7 @@
 			for (int i = 0; i < responseResults.size(); i++) { %>
 				<tr>
 				<td>	
-					@<%= responseResults.get(i) %>
+					<%= responseResults.get(i) %>
 				</td>
 				</tr>
 		<% }} %>

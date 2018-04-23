@@ -10,9 +10,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+		<div id="GotoChoices">
+			<form method="POST" action="ChoicePage.jsp"><button name="GotoChoices" id="GotoChoices">Return to Choices</button></form>
+		</div>
 		<% 
 			HttpSession profileSession = request.getSession(false);
-			GameSession gs = (GameSession)session.getAttribute("loggedInGame");
+			GameSession gs = (GameSession)profileSession.getAttribute("loggedInGame");
 			List<User> players = gs.getPlayers();
 			
 			for(int i=0; i<players.size(); i++) {

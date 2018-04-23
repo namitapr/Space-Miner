@@ -14,6 +14,9 @@
 		<link rel="stylesheet" type="text/css" href="UserResultsPage.css"/>
 	</head>
 	<body>
+	<div id="NoInvite">
+			<form id="SendInvite" method="POST" action="SendInvite"><button name="none" id="none">No Invite</button></form>
+	</div>
 	
 	<% 
 		HttpSession profileSession = request.getSession(false);
@@ -24,7 +27,7 @@
 			<h1>Users:</h1>
 		</div>
 		<div id="userInfoSection">
-			<% List<User> responseResults = (List<User>)request.getAttribute("resultsList"); %>
+			<% List<User> responseResults = (List<User>)profileSession.getAttribute("userResults"); %>
 			<% if (responseResults.size() == 0) { %>
 				<font size="25" color="white">No User Found!</font>
 			<%	} else { %>

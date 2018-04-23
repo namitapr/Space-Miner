@@ -63,7 +63,7 @@ public class GameSession {
 	}
 	
 	public boolean gameFinished() {
-		if(playersFinished == numPlayers) {
+		if(playersFinished == players.size()) {
 			return true;
 		}
 		return false;

@@ -82,7 +82,7 @@ public class Signup_Validate extends HttpServlet {
 			}
 			
 			// MAYBE FIX THIS
-			request.setAttribute("users", users);
+			session.setAttribute("users", users);
 			request.setAttribute("file", file);
 			
 			session.setAttribute("loggedIn", true);

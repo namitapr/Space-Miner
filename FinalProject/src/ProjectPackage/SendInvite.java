@@ -26,24 +26,26 @@ public class SendInvite extends HttpServlet {
 
 			HttpSession session = request.getSession(false);
 			String currUser = request.getParameter("currUser");
-			String loggedInUser = request.getParameter("loggedInUser");
+			User u = (User)session.getAttribute("loggedInUser");
 
 			Gson gson = (Gson)session.getAttribute("gson");
 			String file = (String)session.getAttribute("file");
 			List<User> users = (List<User>)session.getAttribute("users");
 			Database database = (Database)session.getAttribute("database");
-			User u = users.get(database.indexOfUser(loggedInUser));
+			
 			
 			//String pageToForward = "/../../../WebContent/PhaserGame/index.html";
 			String pageToForward = "/index.html";
 			//String pageToForward = this.getServletContext().getRealPath("/index.html");
-			String gameID = u.getCurrGame();
+			String gameID = ((GameSession)session.getAttribute("loggedInGame")).getId();
 			
 			for(int i=0; i<users.size(); i++) {
 				if(users.get(i).getUsername().equals(currUser)) {
 					users.get(i).addInvite(gameID);
 				}
 			}
+			
+			database.setUsers(users);
 						
 			FileWriter fw;
 			String jsonString = gson.toJson(database);
@@ -56,6 +58,8 @@ public class SendInvite extends HttpServlet {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+			
+			session.setAttribute("users", users);
 			
 			RequestDispatcher dispatch = getServletContext().getRequestDispatcher(pageToForward);
 			dispatch.forward(request, response);

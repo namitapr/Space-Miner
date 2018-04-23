@@ -47,7 +47,7 @@ public class UserSearch_Validate extends HttpServlet {
 			}
 		}
 		
-		request.setAttribute("resultsList", userResults);
+		userSearchSession.setAttribute("userResults", userResults);
 
 		RequestDispatcher dispatch = getServletContext().getRequestDispatcher(pageToForward);
 		dispatch.forward(request, response);
