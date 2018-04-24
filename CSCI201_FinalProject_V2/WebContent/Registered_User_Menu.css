@@ -24,6 +24,10 @@ body {
 	transition-duration: 0.4s;
 }
 
+#Main {
+	margin-top: 200px;
+}
+
 #Play_Single_Player_Div {
 	position: relative;
 	left: 150px;

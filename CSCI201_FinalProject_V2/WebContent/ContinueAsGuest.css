@@ -24,7 +24,7 @@ Safari
 transition-duration: 0.4s;
 }
 
-#Join_Multiplayer_Div {
+#Join_Single_Player_Div {
 	margin: 0 auto;
 	align-self: center;
 	color: white;
@@ -32,7 +32,7 @@ transition-duration: 0.4s;
 	font-size: 35px;
 }
 
-#Join_Multiplayer {
+#Join_Single_Player {
 	background-color: #FF8C00;
 	border: none;
 	color: white;
