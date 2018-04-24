@@ -36,7 +36,7 @@
 			</div>
 			<div class="container" id="Change_Login_Info_Div">
 				<img id="ship3" src="http://1.bp.blogspot.com/-ZRDN2sugdrg/UXa1qeFfjYI/AAAAAAAAVjo/1m10L-jCIgo/s1600/starcraft_2_render7E0.png">
-				<form method="POST" action=""><button name="Change_Login_Info" id="Change_Login_Info">Change Login Info</button></form>
+				<form method="POST" action="ResetInformation.jsp"><button name="Change_Login_Info" id="Change_Login_Info">Change Login Info</button></form>
 			</div>
 			
 		</div>
