@@ -5,6 +5,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Reset_Information</title>
+		<link rel="stylesheet" type="text/css" href="ResetInformation.css"/>
 	</head>
 	<body>
 	

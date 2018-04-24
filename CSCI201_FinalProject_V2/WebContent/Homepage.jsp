@@ -54,7 +54,7 @@
 	
 		<div id="Main">
 			<div id="Page_Title">
-				<h1>LAUNCH</h1>
+				<h1>SPACE MINER</h1>
 			</div>
 			
 				<div class="container" id="SignupChoice">

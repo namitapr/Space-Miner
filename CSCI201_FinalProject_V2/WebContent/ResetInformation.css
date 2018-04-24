@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+body {
+	margin:0px;
+	object-fit:contain;
+	background-image:url('https://cdna.artstation.com/p/assets/images/images/002/940/212/large/marc-zieger-raumschiffhangar-a-0-0001.jpg?1467559553');
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#MenuButton {
+	background-color: #DC143C;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	border-radius: 12px;
+	font-family: impact;
+	padding: 5px;
+	width: 100px;
+	-webkit-transition-duration: 0.4s;
+	Safari
+	transition-duration: 0.4s;
+}
+
+#userInputSection {
+	margin: 0 auto;
+	align-self: center;
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	margin-top: -2em;
+}
+
+h3 {
+	margin: 15px;
+	font-size: 45px;
+	margin-top: 50px;
+	color: #B8860B;
+	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: black;
+}
+
+h4 {
+	margin: 15px;
+	font-size: 35px;
+	color: white;
+	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: black;
+}
+
+h5 {
+	margin: 15px;
+	font-size: 35px;
+	color: white;
+	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: black;
+}
+
+#usernameSection, #passwordSection, #radioButtons {
+	margin: 15px;
+	font-size: 35px;
+	margin-top: 50px;
+	color: white;
+	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: black;
+}
+
+input[type="text"] {
+	font-size: 20px;
+	padding: 5px;
+	width: 350px;
+	height: 25px;
+	margin-top: 0px;
+	color: black;	
+}
+
+#radioButtons {
+	margin-left: 37%;
+}
+
+
+#ChangeInfoButton {
+	background-color: #DC143C;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	border-radius: 12px;
+	font-family: impact;
+	padding: 20px;
+	width: 250px;
+	margin-top: 15px;
+	-webkit-transition-duration: 0.4s;
+	Safari
+	transition-duration: 0.4s;
+}
