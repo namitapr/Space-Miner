@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="ContinueAsGuest.css"/>
 		<title>Continue_As_Guest</title>
 	</head>
 	<body>

@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+body {
+	margin:0px;
+	object-fit:contain;
+	background-image:url('https://cdna.artstation.com/p/assets/images/images/002/940/212/large/marc-zieger-raumschiffhangar-a-0-0001.jpg?1467559553');
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+#LogoutButton {
+	background-color: #FF8C00;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	border-radius: 12px;
+	font-family: impact;
+	padding: 5px;
+	width: 100px;
+	-webkit-transition-duration: 0.4s;
+	Safari
+	transition-duration: 0.4s;
+}
+
+#Play_Single_Player_Div {
+	position: relative;
+	left: 150px;
+	display:inline;
+}
+
+#ship1 {
+	height: 70%;
+	width: 70%;
+}
+
+#Play_Single_Player {
+	position:relative;
+	left: 50px;
+    background-color: #FF8C00;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 12px;
+    font-family: impact;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#Play_Multiplayer_Div {
+	position: relative;
+	left: 50px;
+	margin: 50px;
+	display:inline;
+}
+
+#ship2 {
+	height: 80%;
+	width: 80%;
+}
+
+#Play_Multiplayer {
+	background-color: #DC143C;
+	position:relative;
+	left: 100px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 12px;
+    font-family: impact;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#Play_Single_Player:hover, #Play_Multiplayer:hover, #Change_Login_Info:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#Change_Login_Info_Div {
+	position: relative;
+	left: 50px;
+	margin: 30px;
+	display:inline;
+}
+
+#ship3 {
+	height: 85%;
+	width: 85%;
+}
+
+#Change_Login_Info {
+	background-color: #DAA520;
+	position:relative;
+	left: 50px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 12px;
+    font-family: impact;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.container {
+  width: calc(100% / 4);
+  height: 10%;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
