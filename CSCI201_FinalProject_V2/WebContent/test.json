@@ -1,0 +1,9 @@
+{
+	"users": [
+		{"username":"jeffreym","password":"cs201"},
+		{"username":"aaronc","password":"cs270"},
+		{"username":"michaels","password":"cs170"},
+		{"username":"markr","password":"ee209"},
+		{"username":"goodney","password":"cs103"}
+	]
+}
