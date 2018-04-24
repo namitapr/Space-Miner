@@ -52,12 +52,14 @@
 	</head>
 	<body>
 	
+	<div id="Download_Link">
+		<a href="Client.java" download><button id="buttonLink">Download Demo Game</button></a>
+	</div>
+				
 		<div id="Main">
 			<div id="Page_Title">
 				<h1>SPACE MINER</h1>
 			</div>
-			
-				<div id="Download_Link"><a href="Client.java" download>Download Demo Game</a></div>
 			
 				<div class="container" id="SignupChoice">
 					<img id="ship1" src="https://i.pinimg.com/originals/e3/de/61/e3de617109c31eeb92563a7cd2051e67.png">
