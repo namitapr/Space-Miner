@@ -77,6 +77,12 @@ public class ResetInformation_Validate extends HttpServlet {
 			if (changedata.equals("username")) {
 				user.setUsername(username);
 			} else {
+				try {
+					password = Hash.SHA512(password);
+				} catch (HashException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				user.setPassword(password);
 			}
 			

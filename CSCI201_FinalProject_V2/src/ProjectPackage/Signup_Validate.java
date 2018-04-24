@@ -65,6 +65,12 @@ public class Signup_Validate extends HttpServlet {
 		
 		if (!errorPresent) {
 			// Add new user to JSON file
+			try {
+				password = Hash.SHA512(password);
+			} catch (HashException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			User newUser = new User(username, password);
 			users.add(newUser);
 			database.setUsers(users);

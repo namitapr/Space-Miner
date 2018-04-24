@@ -22,6 +22,12 @@ public class Login_Validate extends HttpServlet {
 
 		String username = request.getParameter("inputUsername");
 		String password = request.getParameter("inputPassword");
+		try {
+			password = Hash.SHA512(password);
+		} catch (HashException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		boolean errorPresent = false;
 		boolean usernameCorrect = false;
 		String matchingPassword = "";

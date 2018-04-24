@@ -418,5 +418,4 @@ game.world.removeAll();
 window.location.href = 'EndGame?score=' + score;
 
 
-
 }

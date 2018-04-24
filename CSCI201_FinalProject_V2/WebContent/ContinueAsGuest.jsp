@@ -12,10 +12,15 @@
 		<title>Continue_As_Guest</title>
 	</head>
 	<body>
-	
+		
+		<div id="GoHome">
+			<form method="POST" action="Homepage.jsp"><button name="GoHome" id="GoHome">Return Home</button></form>
+		</div>
+		
 		<% 
 		HttpSession mySession = request.getSession(); 
 		mySession.setAttribute("UserType", "Guest");
+		mySession.setAttribute("loggedInUser", null);
 		%>
 		
 		<div id="Join_Single_Player_Div">
