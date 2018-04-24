@@ -57,6 +57,8 @@
 				<h1>SPACE MINER</h1>
 			</div>
 			
+				<div id="Download_Link"><a href="Client.java" download>Download Demo Game</a></div>
+			
 				<div class="container" id="SignupChoice">
 					<img id="ship1" src="https://i.pinimg.com/originals/e3/de/61/e3de617109c31eeb92563a7cd2051e67.png">
 					<form method="POST" action="Signup.jsp"><button name="signup" id="signup">Sign Up</button></form>
