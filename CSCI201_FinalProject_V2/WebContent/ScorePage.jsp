@@ -9,13 +9,24 @@
 	<%@ page import ="ProjectPackage.User" %>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="ScorePage.css"/>
 		<title>Score_Display</title>
 	</head>
 	<body>
 		<% 
 		HttpSession mySession = request.getSession();
 		%>
-		<h1>Score Page</h1>
+		
+		<div id="ReturnToMenu_Div">
+			<form method="POST" action="ReturnToMenu_Validate"><button name="ReturnToMenu" id="ReturnToMenu">Return To Menu</button></form>
+		</div>
+		
+		<div id="pageTitle">
+			<h1>Score Page</h1>
+		</div>
+		
+		<div id="userInfoSection">
+		
 		<br /><br /><br />
 		<% if (mySession.getAttribute("loggedInUser") != null) { %>
 			<h3><%= ((User)mySession.getAttribute("loggedInUser")).getUsername() %> Score:</h3>
@@ -25,9 +36,8 @@
 			<h4><%= mySession.getAttribute("score") %></h4>
 		<% } %>
 		
-		<div id="ReturnToMenu_Div">
-			<form method="POST" action="ReturnToMenu_Validate"><button name="ReturnToMenu" id="ReturnToMenu">Return To Menu</button></form>
 		</div>
+		
 		
 	</body>
 </html>

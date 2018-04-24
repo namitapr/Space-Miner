@@ -6,7 +6,7 @@ var timeLeftText;
 
 var timeText;
 
-const TOTAL_TIME = 90;
+const TOTAL_TIME = 60;
 
 var rightButton;
 
